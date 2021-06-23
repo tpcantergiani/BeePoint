@@ -1,0 +1,24 @@
+<h1>Vehicles WayPoints</h1>
+
+<table class="table table-striped">
+  <tr>
+    <tr></tr>
+    <thead>
+        <tr>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>Sent At</th>
+        </tr>
+    </thead>
+
+    <% @waypoints.each do |waypoint|%>
+        <tr>
+        <td><%= waypoint.vehicle.identifier %></td>
+        <td><%= waypoint.latitude %></td>
+        <td><%= waypoint.longitude %> </td>
+        <td><%= waypoint.sentAt %></td>
+        </tr>
+    <% end %>
+  </tr>
+
+</table>
