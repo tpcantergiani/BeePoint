@@ -7,8 +7,13 @@ class Api::V1::VehiclesController < ApplicationController
   def gps
     latitude = is_float(params['latitude'])
     longitude = is_float(params['longitude'])
-    sentAt =  is_date(params['sent_at'])
-    waypoint = @vehicle.waypoints.create!(latitude: latitude, longitude: longitude, sentAt: sentAt)
+    sent_at =  is_date(params['sent_at'])
+
+    waypoint = @vehicle.waypoints.create!(
+      latitude: latitude, 
+      longitude: longitude, 
+      sentAt: sent_at
+    )
     render json: waypoint, status: :created
   end
 
@@ -19,7 +24,7 @@ class Api::V1::VehiclesController < ApplicationController
     @vehicle = Vehicle.find_or_create_by(identifier: plate)
   end
 
-  #TODO: dimsinuir complejidad ciclomatica
+  # TODO: dimsinuir complejidad ciclomatica
 
   def check_waypoint
     is_lat_float = (params['latitude'] && float?(params['latitude']))
