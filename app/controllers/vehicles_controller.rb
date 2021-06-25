@@ -6,18 +6,16 @@ class VehiclesController < ApplicationController
     @waypoints = Vehicle.all.map { |v| v.waypoints.last }
     # @markers = @waypoints.map{
     #     |waypoint|
-    #     {  
-    #       "lat": waypoint.latitude,  
-    #       "lng": waypoint.longitude,  
-    #       "picture": {  
-    #         "width":  32,  
+    #     {
+    #       "lat": waypoint.latitude,
+    #       "lng": waypoint.longitude,
+    #       "picture": {
+    #         "width":  32,
     #         "height": 32
     #       },
     #       "infowindow": waypoint.vehicle.identifier,
-    #     }  
+    #     }
     # }
-    gon.markers = @waypoints.map{|waypoint| waypoint.get_marker }
+    gon.markers = @waypoints.map(&:get_marker)
   end
-
-
 end
