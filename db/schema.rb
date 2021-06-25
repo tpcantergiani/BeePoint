@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_23_022814) do
+ActiveRecord::Schema.define(version: 2021_06_25_211205) do
 
   create_table "vehicles", force: :cascade do |t|
     t.string "identifier", null: false
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2021_06_23_022814) do
   create_table "waypoints", force: :cascade do |t|
     t.float "latitude", null: false
     t.float "longitude", null: false
-    t.datetime "sentAt", null: false
+    t.datetime "sent_at", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "vehicle_id", null: false

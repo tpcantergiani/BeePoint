@@ -15,8 +15,8 @@ atDate1 = DateTime.strptime('06/22/2021 09:00', '%m/%d/%Y %H:%M')
 atDate2 = DateTime.strptime('06/20/2021 09:00', '%m/%d/%Y %H:%M')
 atDate3 = DateTime.strptime('06/20/2021 09:01', '%m/%d/%Y %H:%M')
 
-vehicle_1.waypoints.create!(latitude: 11.0, longitude: 11.0, sentAt: atDate1)
-vehicle_1.waypoints.create!(latitude: 12.0, longitude: 12.0, sentAt: atDate2)
+vehicle_1.waypoints.create!(latitude: 11.0, longitude: 11.0, sent_at: atDate1)
+vehicle_1.waypoints.create!(latitude: 12.0, longitude: 12.0, sent_at: atDate2)
 
-vehicle_2.waypoints.create!(latitude: 9.0, longitude: 9.0, sentAt: atDate3)
-vehicle_2.waypoints.create!(latitude: 10.0, longitude: 10.0, sentAt: atDate1)
+vehicle_2.waypoints.create!(latitude: 9.0, longitude: 9.0, sent_at: atDate3)
+vehicle_2.waypoints.create!(latitude: 10.0, longitude: 10.0, sent_at: atDate1)

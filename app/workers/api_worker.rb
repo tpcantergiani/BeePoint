@@ -12,7 +12,7 @@ class ApiWorker
       @vehicle.waypoints.create!(
         latitude: latitude,
         longitude: longitude,
-        sentAt: sent_at
+        sent_at: sent_at
       )
       stdout "WayPoint Created! =)"
     else

@@ -31,12 +31,12 @@ This app use sidekiq to run job asynchronously
 Apps Upgrades for the Future:
 - Change db to mysql
 - Set as primary key of vehicles the identifier (it could be the id)
-- sentAt could be and timestamp, to reduce the length from 8 to 4 bytes, but it would only work until the year 2038.
+- sent_at could be and timestamp, to reduce the length from 8 to 4 bytes, but it would only work until the year 2038.
 
 Clases:
 
-Vehicle(Identififier:String)
+Vehicle(identififier:String)
 
-Waypoint(Longitude:Float, Latitud:Float, sentAt:DateTime)
+Waypoint(longitude:Float, latitud:Float, sent_at:DateTime)
 
 bundle exec sidekiq
