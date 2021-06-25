@@ -1,31 +1,32 @@
 <h1>Vehicles WayPoints</h1>
+<div id=vehicle_div>
+  <table class="table table-striped">
+    <tr>
+      <tr></tr>
+      <thead>
+          <tr>
+          <th>Name </th>
+          <th>Latitude</th>
+          <th>Longitude</th>
+          <th>Sent At</th>
+          </tr>
+      </thead>
 
-<table class="table table-striped">
-  <tr>
-    <tr></tr>
-    <thead>
-        <tr>
-        <th>Name </th>
-        <th>Latitude</th>
-        <th>Longitude</th>
-        <th>Sent At</th>
-        </tr>
-    </thead>
+      <% @waypoints.each do |waypoint|%>
+          <tr>
+          <td><%= waypoint.vehicle.identifier %></td>
+          <td><%= waypoint.latitude %></td>
+          <td><%= waypoint.longitude %> </td>
+          <td><%= waypoint.sentAt %></td>
+          </tr>
+      <% end %>
+    </tr>
 
-    <% @waypoints.each do |waypoint|%>
-        <tr>
-        <td><%= waypoint.vehicle.identifier %></td>
-        <td><%= waypoint.latitude %></td>
-        <td><%= waypoint.longitude %> </td>
-        <td><%= waypoint.sentAt %></td>
-        </tr>
-    <% end %>
-  </tr>
+  </table>
 
-</table>
+  <div id="map" >
+  <%= javascript_pack_tag 'maps', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </div>  
 
-<div style='width: 800px;'>  
-  <div id="map" style='width: 800px; height: 400px;'></div>  
-</div>  
+</div>
 
-<%= javascript_pack_tag 'maps', id:"map", media: 'all', 'data-turbolinks-track': 'reload' %>
