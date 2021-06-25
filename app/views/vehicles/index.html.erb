@@ -1,4 +1,3 @@
-
 <h1>Vehicles WayPoints</h1>
 
 <table class="table table-striped">
@@ -29,12 +28,4 @@
   <div id="map" style='width: 800px; height: 400px;'></div>  
 </div>  
 
-<script type="text/javascript"> 
-var markers = <%= @markers.to_json.html_safe %>
-handler = Gmaps.build('Google');  
-handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){  
-  markers = handler.addMarkers(markers);  
-  handler.bounds.extendWith(markers);  
-  handler.fitMapToBounds();  
-});  
-</script>
+<%= javascript_pack_tag 'maps', id:"map", media: 'all', 'data-turbolinks-track': 'reload' %>
