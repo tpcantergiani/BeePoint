@@ -19,6 +19,7 @@
 - `rubocop-rails`
 - `rubocop-rspec`
 - `rspec-sidekiq`
+- `rails-controller-testing`
 
 ## Database initialization
 - `rails db:migrate`

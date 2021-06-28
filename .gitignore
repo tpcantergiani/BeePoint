@@ -45,3 +45,6 @@ yarn-debug.log*
 
 
 /rails-sidekiq
+
+/.bundle
+/vendor/bundle

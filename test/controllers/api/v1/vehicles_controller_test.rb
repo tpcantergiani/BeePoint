@@ -3,7 +3,8 @@
 require 'test_helper'
 
 class Api::V1::VehiclesControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+  test "should get index" do
+    post '/api/v1/gps'
+    assert_response :created
+  end
 end
