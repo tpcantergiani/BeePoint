@@ -1,7 +1,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  identifier: MyString
+v_one:
+  identifier: veh_1
 
-two:
-  identifier: MyString
+v_two:
+  identifier: veh_2

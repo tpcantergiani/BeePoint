@@ -1,11 +1,25 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  latitude: 1.5
-  longitude: 1.5
-  sentAt: 2021-06-22 21:59:21
+way_one_one:
+  latitude: 1.0
+  longitude: 1.0
+  sent_at: 2021-06-21 21:59:21
+  vehicle: v_one
 
-two:
-  latitude: 1.5
-  longitude: 1.5
-  sentAt: 2021-06-22 21:59:21
+way_one_two:
+  latitude: 1.0
+  longitude: 2.0
+  sent_at: 2021-06-22 21:59:21
+  vehicle: v_one
+
+way_two_one:
+  latitude: 2.0
+  longitude: 1.0
+  sent_at: 2021-06-22 21:59:21
+  vehicle: v_two
+
+way_two_two:
+  latitude: 2.0
+  longitude: 2.0
+  sent_at: 2021-06-22 21:59:22
+  vehicle: v_two
